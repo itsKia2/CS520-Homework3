@@ -66,5 +66,11 @@ public class ExpenseTrackerController {
     }
     view.displayFilteredTransactions(filteredTransactions);
   }
+
+  public void removeTransaction() {
+    int curr = view.currRow();
+    model.removeTransaction(curr);
+    refresh();
+  }
     
 }

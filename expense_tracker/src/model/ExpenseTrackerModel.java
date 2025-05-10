@@ -25,6 +25,12 @@ public class ExpenseTrackerModel {
     transactions.remove(t);
   }
 
+  public void removeTransaction(int i) {
+    if ((i > -1) && (i < this.transactions.size())) {
+      removeTransaction(this.getTransactions().get(i));
+    }
+  }
+
   public List<Transaction> getTransactions() {
     //encapsulation - data integrity
     return Collections.unmodifiableList(new ArrayList<>(transactions));
